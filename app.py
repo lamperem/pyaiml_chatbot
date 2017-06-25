@@ -10,6 +10,11 @@ def login():
   return render_template('home.html')
 
 
+@app.route('/about')
+def about():
+  return render_template('about.html')
+
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser("Twitter ML")
     p.add_argument("--host",default="127.0.0.1",
