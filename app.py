@@ -29,7 +29,7 @@ def chat():
 @socketio.on('message', namespace='/ask')
 def receive_message(message):
     ans=k.respond(message['data'])
-    emit('response', {'data': ans})
+    emit('response', {'data': ans.lower()})
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser("Twitter ML")

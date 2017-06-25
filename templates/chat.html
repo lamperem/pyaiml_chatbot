@@ -20,6 +20,7 @@
                 socket.emit('message', {data: $('#emit_data').val()});
                 $('#log').append('<br>' + $('<div/>').text('You #' + msgCount + ': ' + $('#emit_data').val()).html());
                 msgCount += 1;
+ 				$('#emit_data').val("");
                 return false;
             });
         });
@@ -52,22 +53,39 @@
         </div>
       </nav>
     </section>
+
+	<section class="section">
+    <div class="container">
+
  
-<section class="hero is-primary is-bold is-large">
-	<div class="hero-body">
-		<div class="columns is-mobile">
-  			<div class="column is-half is-offset-one-quarter">
-
-
-
-    <h2>Enviar:</h2>
     <form id="emit" method="POST" action='#'>
-        <input type="text" name="emit_data" id="emit_data" placeholder="Mensaje">
-        <input type="submit" value="Enviar">
+		<div class="field">
+  		<label class="label">Mensaje</label>
+  		<p class="control">
+    		<input class="input" type="text" name="emit_data" id="emit_data" placeholder="Escribe algo">
+  		</p>
+		</div>
+		<p class="control">
+    		<button  type="submit"   class="button is-primary">Submit</button>
+  		</p>
     </form>
-    <h2>Conversación:</h2>
-    <div id="log"></div>
 
+	</div>
+	</section>
+
+	<section class="section">
+    <div class="container">
+
+ 
+	<article class="message">
+  		<div class="message-header">
+    		<p>Historia de la conversación</p>
+  		</div>
+  		<div class="message-body" id='log'></div>
+	</article>
+
+	</div>
+	</section>
 
 			</div>
 		</div>
