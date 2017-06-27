@@ -13,12 +13,12 @@
             var msgCount = 1;
             var socket = io.connect('http://' + document.domain + ':' + location.port + namespace);
             socket.on('response', function(msg) {
-                $('#log').append('<br>' + $('<div/>').text('Bot #' + msgCount + ': ' + msg.data).html());
+                $('#log').append('<br>' + $('<div/>').text('bot #' + msgCount + ': ' + msg.data).html());
                 msgCount += 1;
             });
             $('form#emit').submit(function(event) {
-                socket.emit('message', {data: $('#emit_data').val()});
-                $('#log').append('<br>' + $('<div/>').text('You #' + msgCount + ': ' + $('#emit_data').val()).html());
+                socket.emit('message', {data: '{{username}}:'+$('#emit_data').val()});
+                $('#log').append('<br>' + $('<div/>').text('{{username}} #' + msgCount + ': ' + $('#emit_data').val()).html());
                 msgCount += 1;
  				$('#emit_data').val("");
                 return false;
@@ -40,7 +40,7 @@
         <div class="nav-item">
           <div class="field is-grouped">
             <p class="control">
-              <a href="/exit" class="button is-primary is-outlined">
+              <a href="/" class="button is-primary is-outlined">
                 <span>Terminar</span>
               </a>
             </p>
@@ -59,7 +59,7 @@
 
 
 	<h1  class="title">Platica con nuestro chatbot<h1>
-	<h2  class="subtitle">Ahorita no es tan listo nuestro chatbot dile cualquier cosa<h2>
+	<h2  class="subtitle">Ahorita no es tan listo, dile cualquier cosa<h2>
 
 
  
