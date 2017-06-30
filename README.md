@@ -33,7 +33,7 @@ Activar virtualenv en el directorio con el código
 
 En el directorio del código hacer
 
-    pip -r requierements.txt
+    pip install -r requierements.txt
 
 ## Ejecutarlo
 
