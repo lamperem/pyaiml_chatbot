@@ -78,9 +78,9 @@ if __name__ == '__main__':
     p.add_argument("--port",default=5000,type=int,
             action="store", dest="port",
             help="Port url [500]")
-    p.add_argument("--aiml",default="aiml/mibot.aiml",type=str,
+    p.add_argument("--aiml",default="aiml/lab1.aiml",type=str,
             action="store", dest="aiml",
-            help="AIML file with rules [aiml/mibot.aiml]")
+            help="AIML file with rules [aiml/lab1.aiml]")
     p.add_argument("--debug",default=False,
             action="store_true", dest="debug",
             help="Use debug deployment [Flase]")

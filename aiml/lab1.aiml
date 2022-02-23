@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+  <category>
+    <pattern>SOY *</pattern>
+    <template>
+      Hola <set name="username"> <star/></set>!
+    </template>
+  </category>
+
+  <category>
+    <pattern>ADIOS</pattern>
+    <template>
+      Adios <get name="username"/>, ¡hasta la próxima!
+    </template>
+  </category>
+
+  <category>
+    <pattern>QUIEN ERES</pattern>
+    <template>
+      Yo soy una inteligencia artifical <get name="username"/>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SOY *</pattern>
+    <template>
+      Hola <star index="1"/>, ¿como estas?
+    </template>
+  </category>
+
+  <category>
+    <pattern>INTELIGENTE</pattern>
+    <template>
+      <random>
+        <li>SOY UNA INTELIGENCIA ARTIFICIAL</li>
+        <li>¿TU ERES INTELIGENTE?</li>
+        <li>CUENTAME MÁS</li>
+      </random>   
+    </template>
+  </category>
+
+  <category>
+    <pattern>_ INTELIGENTE *</pattern>
+    <template>
+        <srai>INTELIGENTE</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <random>
+        <li>NO ENTIENDO</li>
+        <li>TE GUSTA APRENDER SOBRE INTELIGENCIA ARTIFICIAL</li>
+        <li>QUE EDAD TIENES</li>
+        <li>CUAL ES TU COMIDA FAVORITA</li>
+        <li>COMO TE SIENTES HOY</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern>SI</pattern>
+    <that>TE GUSTA APRENDER SOBRE INTELIGENCIA ARTIFICIAL</that>
+    <template>Es una clase muy bonita</template>
+  </category>
+
+  <category>
+    <pattern>NO</pattern>
+    <that>TE GUSTA APRENDER SOBRE INTELIGENCIA ARTIFICIAL</that>
+    <template>Esta bien, aunque debes ganarla =)</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>QUE EDAD TIENES</that>
+    <template>¡Tienes <star index = "1"/> años! Yo nací hace unas horas</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>CUAL ES TU COMIDA FAVORITA</that>
+    <template>
+      <star index = "1"/> no conozco esa comida
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>  
+    <that>COMO TE SIENTES HOY</that>
+    <template>
+        <think><set name="state"><star/></set></think>
+        <condition name="state" value="bien">Me alegra eso</condition>
+        <condition name="state" value="regular">¿Por qué?</condition>
+        <condition name="state" value="mal">¿Te sucedio algo?</condition>
+    </template>  
+  </category>
+
+</aiml>
