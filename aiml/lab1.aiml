@@ -4,14 +4,14 @@
   <category>
     <pattern>SOY *</pattern>
     <template>
-      Hola <set name="username"> <star/></set>!
+      Hola <set name="username"> <star/></set>
     </template>
   </category>
 
   <category>
     <pattern>ADIOS</pattern>
     <template>
-      Adios <get name="username"/>, ¡hasta la próxima!
+      Adios <get name="username"/>. Hasta la proxima.
     </template>
   </category>
 
@@ -25,7 +25,7 @@
   <category>
     <pattern>SOY *</pattern>
     <template>
-      Hola <star index="1"/>, ¿como estas?
+      Hola <star index="1"/>, como estas
     </template>
   </category>
 
@@ -34,8 +34,8 @@
     <template>
       <random>
         <li>SOY UNA INTELIGENCIA ARTIFICIAL</li>
-        <li>¿TU ERES INTELIGENTE?</li>
-        <li>CUENTAME MÁS</li>
+        <li>TU ERES INTELIGENTE</li>
+        <li>CUENTAME MAS</li>
       </random>   
     </template>
   </category>
@@ -69,13 +69,13 @@
   <category>
     <pattern>NO</pattern>
     <that>TE GUSTA APRENDER SOBRE INTELIGENCIA ARTIFICIAL</that>
-    <template>Esta bien, aunque debes ganarla =)</template>
+    <template>Esta bien, aunque debes ganarla</template>
   </category>
 
   <category>
     <pattern>*</pattern>
     <that>QUE EDAD TIENES</that>
-    <template>¡Tienes <star index = "1"/> años! Yo nací hace unas horas</template>
+    <template>Tienes <star index = "1"/> años. Yo nací hace unas horas</template>
   </category>
 
   <category>
@@ -92,8 +92,8 @@
     <template>
         <think><set name="state"><star/></set></think>
         <condition name="state" value="bien">Me alegra eso</condition>
-        <condition name="state" value="regular">¿Por qué?</condition>
-        <condition name="state" value="mal">¿Te sucedio algo?</condition>
+        <condition name="state" value="regular">Por que</condition>
+        <condition name="state" value="mal">Te sucedio algo</condition>
     </template>  
   </category>
 
