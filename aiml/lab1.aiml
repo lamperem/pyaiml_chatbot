@@ -75,7 +75,7 @@
   <category>
     <pattern>*</pattern>
     <that>QUE EDAD TIENES</that>
-    <template>Tienes <star index = "1"/> años. Yo nací hace unas horas</template>
+    <template>Tienes <star index = "1"/> años. Yo no se que edad tengo</template>
   </category>
 
   <category>
